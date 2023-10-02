@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tramites_extranjeria</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #pdf-container {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<div id="pdf-container">
+    <embed id="pdf-viewer" src="rut-WILMER ANDRIAN-CANDO-CORO.pdf" type="application/pdf" width="100%" height="100%">
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const pdfViewer = document.getElementById('pdf-viewer');
+
+        // Verifica si el navegador es compatible con el modo de pantalla completa
+        if (pdfViewer.requestFullscreen) {
+            pdfViewer.addEventListener('click', function () {
+                pdfViewer.requestFullscreen();
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
